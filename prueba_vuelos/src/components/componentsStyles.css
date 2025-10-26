@@ -12,7 +12,8 @@ h2 {
   text-align: center;
   padding: 20px;
 }
-.link {
+.link,
+.tablas-link {
   text-decoration: none;
   margin: 20px;
   color: #ffffff;
@@ -44,6 +45,18 @@ h2 {
   background-color: #ffffff;
   border-radius: 10px;
 }
-.parrafo{
+.parrafo {
   font-size: 1.2rem;
+}
+.tablas-contenedor{
+  display: flex;
+  flex-direction: column;
+}
+.tablas{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.tablas-link{
+  text-align: center;
+  cursor: pointer;
 }

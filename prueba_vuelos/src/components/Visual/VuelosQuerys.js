@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import "./componentsStyles.css";
+import "../componentsStyles.css";
 
 function Vuelos() {
   const [claveVuelo, setClave] = useState([]);
 
-  const API_URL = "http://mibackend.local/";
+  const API_URL = "http://mibackend.local/vuelos/";
 
   useEffect(() => {
     fetch(API_URL + "obtener_vuelos.php")

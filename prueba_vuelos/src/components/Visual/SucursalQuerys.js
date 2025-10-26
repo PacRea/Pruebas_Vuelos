@@ -1,22 +1,22 @@
 import { useEffect, useState } from "react";
-import "./componentsStyles.css";
+import "../componentsStyles.css";
 
 function Sucursal() {
-  const [pasaporte, setClave] = useState([]);
+  const [codigo, setCodigo] = useState([]);
 
-  const API_URL = "http://mibackend.local/";
+  const API_URL = "http://mibackend.local/sucursal/";
 
   useEffect(() => {
     fetch(API_URL + "obtener_sucursal.php")
       .then((res) => res.json())
-      .then((data) => setClave(data));
+      .then((data) => setCodigo(data));
   }, []);
 
   return (
     <div>
       <h2 className="titulo">Lista de Turistas</h2>
       <div className="contenedor">
-        {pasaporte.map((p) => (
+        {codigo.map((p) => (
           <div className="contenedor-contenido" key={p.sucursal_codigo}>
             <h3 className="indentificador">Codigo de la Sucursal: {p.sucursal_codigo}</h3>
             <div className="datos">

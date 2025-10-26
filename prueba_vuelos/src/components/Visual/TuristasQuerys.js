@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import "./componentsStyles.css";
+import "../componentsStyles.css";
 
 function Turistas() {
-  const [pasaporte, setClave] = useState([]);
+  const [pasaporte, setPasaporte] = useState([]);
 
-  const API_URL = "http://mibackend.local/";
+  const API_URL = "http://mibackend.local/turistas/";
 
   useEffect(() => {
     fetch(API_URL + "obtener_clientes.php")
       .then((res) => res.json())
-      .then((data) => setClave(data));
+      .then((data) => setPasaporte(data));
   }, []);
 
   return (

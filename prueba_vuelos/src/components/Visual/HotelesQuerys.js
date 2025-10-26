@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import "./componentsStyles.css";
+import "../componentsStyles.css";
 
 function Hoteles() {
-  const [pasaporte, setClave] = useState([]);
+  const [claveHotel, setClave] = useState([]);
 
-  const API_URL = "http://mibackend.local/";
+  const API_URL = "http://mibackend.local/hotel/";
 
   useEffect(() => {
     fetch(API_URL + "obtener_hoteles.php")
@@ -16,7 +16,7 @@ function Hoteles() {
     <div>
       <h2 className="titulo">Lista de Turistas</h2>
       <div className="contenedor">
-        {pasaporte.map((p) => (
+        {claveHotel.map((p) => (
           <div className="contenedor-contenido" key={p.hotel_codigo}>
             <h3 className="indentificador">Codigo del Hotel: {p.hotel_codigo}</h3>
             <div className="datos">

@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Vuelos from "./VuelosQuerys";
-import Turistas from "./TuristasQuerys";
-import Hoteles  from "./HotelesQuerys";
-import Sucursal from "./SucursalQuerys";
+import Vuelos from "./Visual/VuelosQuerys";
+import Turistas from "./Visual/TuristasQuerys";
+import Hoteles  from "./Visual/HotelesQuerys";
+import Sucursal from "./Visual/SucursalQuerys";
 
 function Landing() {
   return (
